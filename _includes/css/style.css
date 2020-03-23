@@ -1,24 +1,41 @@
-/* HTML5 ✰ Boilerplate
- * ==|== normalize ==========================================================
- */
+ul.pager {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+ul.pager li {
+    display: inline;
+    text-align: center;
+    background: #444;
+    flex: 1;
+    margin: 0px 5px 0px 5px;
+}
+
+a.pagebutton {
+    vertical-align: center;
+    padding: 16px 0px 16px 0px;
+    display: block;
+}
+
+a.pagebutton:hover {
+    background: #666;
+        -webkit-transition: opacity 200ms linear;
+    -moz-transition: opacity 200ms linear;
+    transition: opacity 200ms linear;
+}
 
 @font-face {
-  font-family: 'AtlasGrotesk-Thin';
-  src: url('../fonts/AtlasGrotesk-Thin.eot?#iefix') format('embedded-opentype'),  url('../fonts/AtlasGrotesk-Thin.otf')  format('opentype'),
-       url('../fonts/AtlasGrotesk-Thin.woff') format('woff'), url('../fonts/AtlasGrotesk-Thin.ttf')  format('truetype'), url('../fonts/AtlasGrotesk-Thin.svg#AtlasGrotesk-Thin') format('svg');
+  font-family: 'TechnaSans-Regular';
+  src: url('../fonts/TechnaSans-Regular.otf')  format('opentype'),
+       url('../fonts/TechnaSans-Regular.sfd') format('sfd');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'AtlasGrotesk-Medium';
-  src: url('../fonts/AtlasGrotesk-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/AtlasGrotesk-Medium.otf')  format('opentype'),
-       url('../fonts/AtlasGrotesk-Medium.woff') format('woff'), url('../fonts/AtlasGrotesk-Medium.ttf')  format('truetype'), url('../fonts/AtlasGrotesk-Medium.svg#AtlasGrotesk-Medium') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+article, aside, details, figcaption, figure, header, hgroup, nav, section {
   display: block;
 }
 
@@ -47,22 +64,23 @@ body {
   margin: 0;
   font-size: 13px;
   line-height: 1.231;
+  background: #2c2c2c;
 }
 
 body, button, input, select, textarea {
   font-family: sans-serif;
-  color: #222;
+  color: #ddd;
 }
 
 ::-moz-selection {
   background: #fe57a1;
-  color: #fff;
+  color: #2c2c2c;
   text-shadow: none;
 }
 
 ::selection {
   background: #fe57a1;
-  color: #fff;
+  color: #2c2c2c;
   text-shadow: none;
 }
 
@@ -116,13 +134,13 @@ hr {
 
 ins {
   background: #ff9;
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
 mark {
   background: #ff0;
-  color: #000;
+  color: #fff;
   font-style: italic;
   font-weight: bold;
 }
@@ -303,7 +321,7 @@ td {
    ========================================================================== */
 
   body {
-    font-family: 'AtlasGrotesk-Thin', sans-serif;
+    font-family: 'TechnaSans-Regular', sans-serif;
     min-width: 100%;
     display: none;
   }
@@ -320,20 +338,20 @@ td {
   }
 
   a {
-    font-family: 'AtlasGrotesk-Thin', sans-serif;
+    font-family: 'TechnaSans-Regular', sans-serif;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-size: 14px;
   }
 
   a:active, a:visited {
-    color: #000;
+    color: #fff;
   }
 
   header {
     padding-top:30px;
     padding-bottom:30px;
-    font-family: 'AtlasGrotesk-Thin', sans-serif;
+    font-family: 'TechnaSans-Regular', sans-serif;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -341,12 +359,27 @@ td {
     top: 0px;
     height: 50px;
     z-index: 50;
-    background-color:white;
+    background: #2c2c2c;
   }
 
-  header .inner{
-    border-top: 10px solid black;
-    border-bottom: 1px solid #000;
+  footer {
+    padding-bottom:30px;
+    font-family: 'TechnaSans-Regular', sans-serif;
+    text-align: center;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 50px;
+    z-index: 50;
+    background: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  header .inner, footer .inner {
+    border-top: 10px solid #fff;
+    border-bottom: 1px solid #fff;
     position: relative;
     margin: 0 30px;
   }
@@ -489,13 +522,13 @@ td {
     -webkit-transition: opacity 200ms linear;
     -moz-transition: opacity 200ms linear;
     transition: opacity 200ms linear;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(25,25,25,0.9);
     text-align: center;
   }
 
   .projects .cover:hover {
     opacity: 1;
-    color:#333;
+    color:#ccc;
   }
 
   .projects .cover .project-details{
@@ -506,7 +539,7 @@ td {
     width:100%;
   }
   .projects .cover .project-details span:first-child{
-    font-family: 'AtlasGrotesk-Medium', sans-serif;
+    font-family: 'TechnaSans-Regular', sans-serif;
   }
 
   .projects .cover .project-details span{
@@ -719,7 +752,7 @@ td {
 
   .post-wide .project-title{
     margin-top: 10px;
-    font-family: 'AtlasGrotesk-Medium', sans-serif;
+    font-family: 'TechnaSans-Regular', sans-serif;
     font-weight: 600;
     margin-bottom: 5px;
   }
@@ -737,6 +770,10 @@ td {
   }
 
   @media only screen and (min-width: 1024px) {
+    ul.pager {
+      width: 50%;
+    }
+
     .project-description{
       padding-top: 80px;
       margin-bottom: 80px;
@@ -876,6 +913,7 @@ td {
 
 
   @media only screen and (max-width: 1024px) {
+
     .next-project, .prev-project{
       display: none;
     }
@@ -984,7 +1022,6 @@ td {
   }
 
   @media only screen and (max-width: 480px) {
-
     header nav {
       display: none;
     }
