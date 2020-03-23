@@ -12,13 +12,16 @@ pagination:
       <a class="cover" href="{{ post.url }}">
         <div class="project-details">
           <span>
-            {{ post.title }}
+            <h1>{{ post.band }}</h1>
           </span>
           <span>
-            {{ post.worktype }}
+            <h3>{{ post.venue }}</h3>
           </span>
           <span>
-            View project
+            {{ post.date | date: '%-d %B %Y' }}
+          </span>
+          <span>
+            <br />
           </span>
         </div>
       </a>
@@ -35,7 +38,7 @@ pagination:
           <span class="progress-bar" style="width: {{ post.progress }}%"></span>
         </span>
       {% endif %}
-      <img class="thumb" src="{{ site.baseurl }}img/thumbs/{{ post.uid }}.jpg" />
+      <div class="thumb" style="background-image:url({{ site.baseurl }}img/thumbs/{{ post.uid }})"></div>
       <div class="aspect-two-one"></div>
     </div>
   </li>

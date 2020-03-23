@@ -4,7 +4,8 @@ layout: default
 
 <div id="post-container">
   <div class="post post-narrow">
-    <h2>{{ page.title }}</h2>
+    <h1><br />{{ page.band }}</h1>
+    <h3>{{ page.venue }} | {{ page.date | date: '%-d %B %Y' }}</h3>
     <!-- <div class="separator"> </div> -->
     {{ content }}
   </div>
