@@ -774,6 +774,9 @@ td {
       width: 50%;
     }
 
+    ul.pager li {
+      margin: 0px 15px 0px 15px;
+    }
     .project-description{
       padding-top: 80px;
       margin-bottom: 80px;
