@@ -494,7 +494,7 @@ td {
   .projects li {
     display: inline-block;
     list-style: none;
-    width: 33.3333%;
+    width: 25%;
     float: left;
   }
 
@@ -505,6 +505,8 @@ td {
     -moz-transition: all 200ms linear;
     transition: all 200ms linear;
     position: relative;
+    height: 0; /* set the height to zero */
+    padding-bottom: calc(100% - 30px); /* set vertical padding to make the height match the width */
   }
 
   .projects li .aspect-two-one {
