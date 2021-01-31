@@ -1,13 +1,13 @@
-name: setlust.com
-description: personal setlist collection of j. pirro
-author: jonathan pirro
+name: HEYBUYMYSHIT.COM
+description: 2003-2019 concert merchandise for sale
+author: 09blk.com
 exclude: [ _design, README ]
 baseurl: "/"
 
 pagination:
   enabled: true
   per_page: 16
-  sort_reverse: true
+  sort_reverse: false
   permalink: '/:num/'
   title: ':title | :num of :max'
   limit: 0
